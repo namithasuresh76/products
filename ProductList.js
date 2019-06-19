@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Product } from './Product';
-
+import axios from 'axios';
 export class ProductList extends Component {
     constructor(props){
         super(props);
@@ -40,7 +40,13 @@ export class ProductList extends Component {
             products:this.state.products.filter(selectedProduct => product.id !== selectedProduct.id )
         });
     }
-
+componentDidMount(){
+    let promise=axios.get('http://jsonplaceholder.typicode.com/users')
+    promise.then(response=>this.setState({
+        selectedProducts:[],
+        products:response.data
+    }))
+}
     
     render(){
                 return (
