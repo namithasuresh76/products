@@ -1,0 +1,19 @@
+{
+    "products":[
+        {
+            "id":1,
+            "name":"Vivo",
+            "price":15000
+        },
+        {
+            "id":2,
+            "name":"Samsung",
+            "price":20000
+        },
+        {
+            "id":3,
+            "name":"I-Phone",
+            "price":40000
+        }
+    ]
+}
